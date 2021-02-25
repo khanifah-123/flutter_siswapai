@@ -1,13 +1,10 @@
+import 'package:androidflutter/HalamanRegister.dart';
 import 'package:flutter/material.dart';
 import 'package:androidflutter/Kotak.dart';
+import 'package:get/get.dart';
+import 'package:androidflutter/Peringkat.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: RegisterPage(),
-  ));
-}
-
-class RegisterPage extends StatelessWidget {
+class BerandaPage extends StatelessWidget {
   @override
   final List<Widget> quis = List<Widget>.generate(5, (i) => new Kotak());
   Widget build(BuildContext context) {
@@ -90,7 +87,8 @@ class RegisterPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => Peringkat(),
+                        transition: Transition.leftToRight),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Text("Peringkat", style: TextStyle(fontSize: 14)),
@@ -385,49 +383,6 @@ class RegisterPage extends StatelessWidget {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class Tantangan extends StatelessWidget {
-  Tantangan({
-    Key key,
-  }) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(5.0),
-      child: SizedBox(
-        width: 120.0,
-        height: 150.0,
-        child: new RaisedButton(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          color: Colors.teal[400],
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Text("Menyelesaikan 3 Paket soal 2/3"),
-              SizedBox(
-                height: 10.0,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/piala.png'))),
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Text(
-                "Waktu Pengerjaan Sedang Berjalan",
-                style: TextStyle(color: Colors.red[700]),
-              ),
-            ],
-          ),
-          onPressed: () {},
         ),
       ),
     );

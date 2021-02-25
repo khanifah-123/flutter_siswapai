@@ -19,7 +19,8 @@ class Kotak extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Container(
-                child: Text("Asd23sd"),
+                margin: EdgeInsets.only(left: 0.0),
+                child: Text("Asd23sdd"),
                 decoration: BoxDecoration(
                     color: Colors.teal[100],
                     borderRadius: BorderRadius.circular(10.0)),

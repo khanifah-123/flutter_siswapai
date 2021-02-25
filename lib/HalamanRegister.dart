@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:androidflutter/Beranda.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: RegisterPage(),
-  ));
-}
-
-class RegisterPage extends StatelessWidget {
+class HalamanRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -169,7 +165,7 @@ class RegisterPage extends StatelessWidget {
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
-                            onPressed: () {},
+                            onPressed: () => Get.to(() => BerandaPage()),
                           ),
                         ],
                       ),
