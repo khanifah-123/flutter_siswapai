@@ -7,6 +7,9 @@ import 'package:androidflutter/Peringkat.dart';
 class BerandaPage extends StatelessWidget {
   @override
   final List<Widget> quis = List<Widget>.generate(5, (i) => new Kotak());
+  final List<Widget> lives = List<Widget>.generate(5, (i) => new Live());
+  final List<Widget> tantangan =
+      List<Widget>.generate(5, (i) => new Tantangan());
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -304,39 +307,7 @@ class BerandaPage extends StatelessWidget {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: <Widget>[
-                    Container(
-                      child: Column(children: <Widget>[
-                        Container(
-                          width: 120.0,
-                          height: 150.0,
-                          decoration: BoxDecoration(
-                              color: Colors.teal[400],
-                              borderRadius: BorderRadius.circular(15.0)),
-                        ),
-                      ]),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      width: 120.0,
-                      height: 150.0,
-                      decoration: BoxDecoration(
-                          color: Colors.teal[400],
-                          borderRadius: BorderRadius.circular(15.0)),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      width: 120.0,
-                      height: 150.0,
-                      decoration: BoxDecoration(
-                          color: Colors.teal[400],
-                          borderRadius: BorderRadius.circular(15.0)),
-                    ),
-                  ],
+                  children: tantangan,
                 ),
               ),
             ),
@@ -378,7 +349,7 @@ class BerandaPage extends StatelessWidget {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: quis,
+                  children: lives,
                 ),
               ),
             ),
