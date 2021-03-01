@@ -35,11 +35,11 @@ class Kotak extends StatelessWidget {
                 style: TextStyle(color: Colors.grey[300]),
               ),
               SizedBox(
-                height: 10.0,
+                height: 20.0,
               ),
               Text(
                 "Waktu Pengerjaan Sedang Berjalan",
-                style: TextStyle(color: Colors.red[700]),
+                style: TextStyle(color: Colors.red[300], fontSize: 12.0),
               ),
             ],
           ),
@@ -157,15 +157,17 @@ class BoxPeringkat extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(right: 50.0),
             height: 50.0,
             width: 50.0,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/images/Rank1.png'))),
           ),
+          SizedBox(
+            width: 10.0,
+          ),
           Container(
-            padding: EdgeInsets.only(right: 20.0),
+            padding: EdgeInsets.only(right: 70.0),
             height: 40.0,
             width: 40.0,
             decoration: BoxDecoration(

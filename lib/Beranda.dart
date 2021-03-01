@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:androidflutter/Kotak.dart';
 import 'package:get/get.dart';
 import 'package:androidflutter/Peringkat.dart';
+import 'package:androidflutter/Analisis.dart';
+import 'package:androidflutter/Permen.dart';
 
 class BerandaPage extends StatelessWidget {
   @override
@@ -107,7 +109,7 @@ class BerandaPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => Analisis()),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Row(
@@ -134,7 +136,10 @@ class BerandaPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Get.to(
+                      () => Permen(),
+                      transition: Transition.upToDown,
+                    ),
                     color: Colors.teal,
                     textColor: Colors.white,
                     child: Text("Permen", style: TextStyle(fontSize: 14)),
